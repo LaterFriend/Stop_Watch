@@ -1,0 +1,82 @@
+body {
+    background: url(//unsplash.it/1920?image=165) no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: lightcyan;
+    height: 15rem;
+    width: 25rem;
+    border-radius: 20px;
+    box-shadow: 0 0 3px;
+}
+
+#timer {
+    font-size: 5rem;
+    font-family: monospace;
+    text-align: center;
+}
+
+#timer::after {
+    content: '';
+    display: block;
+    height: .2rem;
+    width: 22rem;
+    background: black;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 6px;
+}
+
+.buttons {
+    margin-top: 2.5rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    width: 4rem;
+    height: 4rem;
+    border: 2px solid black;
+    border-radius: 15%;
+    cursor: pointer;
+    transition: ease-in 0.2s;
+}
+
+button i {
+    font-size: 3rem;
+    color: white;
+}
+
+
+.container .buttons .start {
+    background-color: lightgreen;
+    box-shadow: inset 0 0 0 0 lightgreen;
+}
+
+.container .buttons .start.stop {
+    background-color: lightcoral;
+    box-shadow: inset 0 0 0 0 lightcoral;
+}
+
+.container .buttons .reset {
+    background-color: lightsalmon;
+    box-shadow: inset 0 0 0 0 lightsalmon;
+}
+
+
+.container .buttons .start:hover {
+    box-shadow: inset 4rem 0 0 0 green;
+}
+
+.container .buttons .start.stop:hover {
+    box-shadow: inset 4rem 0 0 0 red;
+}
+
+.container .buttons .reset:hover {
+    box-shadow: inset 4rem 0 0 0 orange;
+}
